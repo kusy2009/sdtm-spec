@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
-// API base URL
-const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5050';
+// API base URL - use relative URL since API is served from same domain
+const API_BASE = '';
 
 function App() {
   // State
