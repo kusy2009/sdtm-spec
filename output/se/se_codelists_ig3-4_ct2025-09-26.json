@@ -1,0 +1,127 @@
+{
+  "domain": "SE",
+  "ig_version": "3-4",
+  "ct_version": "2025-09-26",
+  "total_codelists": 1,
+  "codelists": [
+    {
+      "codelist_code": "C99079",
+      "name": "Epoch",
+      "extensible": "true",
+      "total_terms": 15,
+      "terms": [
+        {
+          "code": "C125938",
+          "submission_value": "BASELINE",
+          "preferred_term": "Baseline Epoch",
+          "definition": "A period in a clinical study after eligibility has been met and before the start of treatment, at which baseline measurements are collected.",
+          "synonyms": []
+        },
+        {
+          "code": "C102255",
+          "submission_value": "BLINDED TREATMENT",
+          "preferred_term": "Blinded Treatment Epoch",
+          "definition": "A period in a clinical study during which subjects receive blinded therapeutic treatment.",
+          "synonyms": []
+        },
+        {
+          "code": "C123452",
+          "submission_value": "CONTINUATION TREATMENT",
+          "preferred_term": "Continuation Therapy Epoch",
+          "definition": "A period in a clinical study during which subjects receive continuation treatment.",
+          "synonyms": [
+            "Continuation Phase"
+          ]
+        },
+        {
+          "code": "C202578",
+          "submission_value": "FOLLOW-UP",
+          "preferred_term": "Follow-Up Epoch",
+          "definition": "A period in a clinical study during which information about the health status of an individual is obtained after study interventions have concluded.",
+          "synonyms": []
+        },
+        {
+          "code": "C123453",
+          "submission_value": "INDUCTION TREATMENT",
+          "preferred_term": "Induction Therapy Epoch",
+          "definition": "A period in a clinical study during which subjects receive induction treatment.",
+          "synonyms": [
+            "Induction Phase",
+            "Intensive Phase"
+          ]
+        },
+        {
+          "code": "C209541",
+          "submission_value": "INTERVENTION",
+          "preferred_term": "Investigational Intervention Epoch",
+          "definition": "A period in a study during which subjects are receiving investigational intervention(s).",
+          "synonyms": []
+        },
+        {
+          "code": "C202577",
+          "submission_value": "LONG-TERM FOLLOW-UP",
+          "preferred_term": "Long-term Follow-up Epoch",
+          "definition": "A period in a clinical study during which information about the health status of an individual is obtained long after study interventions have concluded.",
+          "synonyms": []
+        },
+        {
+          "code": "C165873",
+          "submission_value": "OBSERVATION",
+          "preferred_term": "Observation Study Epoch",
+          "definition": "A period in a clinical study during which subjects are observed, without any planned intervention.",
+          "synonyms": []
+        },
+        {
+          "code": "C102256",
+          "submission_value": "OPEN LABEL TREATMENT",
+          "preferred_term": "Open Label Treatment Epoch",
+          "definition": "A period in a clinical study during which subjects receive open label therapeutic treatment.",
+          "synonyms": []
+        },
+        {
+          "code": "C199844",
+          "submission_value": "PRE-SCREENING",
+          "preferred_term": "Pre-Screening Epoch",
+          "definition": "A period in a clinical study during which subjects are evaluated prior to entering the full screening period.",
+          "synonyms": []
+        },
+        {
+          "code": "C210380",
+          "submission_value": "PRODUCT EXPOSURE",
+          "preferred_term": "Product Exposure Epoch",
+          "definition": "A period in a clinical study during which subjects are exposed to the product.",
+          "synonyms": []
+        },
+        {
+          "code": "C98779",
+          "submission_value": "RUN-IN",
+          "preferred_term": "Run-in Period",
+          "definition": "A period in a clinical study that occurs after screening and before randomization, during which the subject is further evaluated and/or prepared for the commencement of the clinical study investigatio",
+          "synonyms": []
+        },
+        {
+          "code": "C202487",
+          "submission_value": "SCREENING",
+          "preferred_term": "Screening Epoch",
+          "definition": "A period in a clinical study during which subjects are evaluated for participation in the study.",
+          "synonyms": []
+        },
+        {
+          "code": "C101526",
+          "submission_value": "TREATMENT",
+          "preferred_term": "Treatment Epoch",
+          "definition": "A period in a study during which subjects are receiving investigational therapy or treatment.",
+          "synonyms": []
+        },
+        {
+          "code": "C42872",
+          "submission_value": "WASHOUT",
+          "preferred_term": "Washout Period",
+          "definition": "The interval of time that a participant enrolled in a study must not receive a specified treatment(s) before starting a study intervention(s). (CDISC Glossary)",
+          "synonyms": []
+        }
+      ]
+    }
+  ],
+  "fetched_at": "2025-12-26T22:18:48.843221"
+}

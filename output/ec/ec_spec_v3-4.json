@@ -1,0 +1,642 @@
+{
+  "domain": "EC",
+  "label": "Exposure as Collected",
+  "class": "Interventions",
+  "class_href": "/mdr/sdtmig/3-4/classes/Interventions",
+  "ig_version": "3-4",
+  "total_variables": 45,
+  "variables": [
+    {
+      "order": "1",
+      "name": "STUDYID",
+      "label": "Study Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Unique identifier for a study."
+    },
+    {
+      "order": "2",
+      "name": "DOMAIN",
+      "label": "Domain Abbreviation",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Two-character abbreviation for the domain."
+    },
+    {
+      "order": "3",
+      "name": "USUBJID",
+      "label": "Unique Subject Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identifier used to uniquely identify a subject across all studies for all applications or submissions involving the product."
+    },
+    {
+      "order": "4",
+      "name": "ECSEQ",
+      "label": "Sequence Number",
+      "type": "Num",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Sequence number given to ensure uniqueness of subject records within a domain. May be any valid number."
+    },
+    {
+      "order": "5",
+      "name": "ECGRPID",
+      "label": "Group ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used to tie together a block of related records in a single domain for a subject."
+    },
+    {
+      "order": "6",
+      "name": "ECREFID",
+      "label": "Reference ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Internal or external identifier (e.g., kit number, bottle label, vial identifier)."
+    },
+    {
+      "order": "7",
+      "name": "ECSPID",
+      "label": "Sponsor-Defined Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Sponsor-defined reference number. May be preprinted on the CRF as an explicit line identifier or defined in the sponsor's operational database. Example: Line number on a CRF page."
+    },
+    {
+      "order": "8",
+      "name": "ECLNKID",
+      "label": "Link ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identifier used to link related records across domains."
+    },
+    {
+      "order": "9",
+      "name": "ECLNKGRP",
+      "label": "Link Group ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identifier used to link related, grouped records across domains."
+    },
+    {
+      "order": "10",
+      "name": "ECTRT",
+      "label": "Name of Treatment",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Topic",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Name of the intervention treatment known to the subject and/or administrator."
+    },
+    {
+      "order": "11",
+      "name": "ECMOOD",
+      "label": "Mood",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C125923",
+      "codelist_codes": [
+        "C125923"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C125923",
+      "description": "Mode or condition of the record specifying whether the intervention (activity) is intended to happen or has happened. Values align with BRIDG pillars (e.g., scheduled context, performed context) and HL7 activity moods (e.g., intent, event). Examples: \"SCHEDULED\", \"PERFORMED\"."
+    },
+    {
+      "order": "12",
+      "name": "ECCAT",
+      "label": "Category of Treatment",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Grouping Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used to define a category of related ECTRT values."
+    },
+    {
+      "order": "13",
+      "name": "ECSCAT",
+      "label": "Subcategory of Treatment",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Grouping Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "A further categorization of ECCAT values."
+    },
+    {
+      "order": "14",
+      "name": "ECPRESP",
+      "label": "Pre-Specified",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "Used when a specific intervention is prespecified. Values should be \"Y\" or null."
+    },
+    {
+      "order": "15",
+      "name": "ECOCCUR",
+      "label": "Occurrence",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "Used to indicate whether a treatment occurred when information about the occurrence is solicited. ECOCCUR = \"N\" when a treatment was not taken, not given, or missed."
+    },
+    {
+      "order": "16",
+      "name": "ECREASOC",
+      "label": "Reason for Occur Value",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "The reason for the value in --OCCUR. If --OCCUR = \"N\", this is the reason the exposure did not occur."
+    },
+    {
+      "order": "17",
+      "name": "ECDOSE",
+      "label": "Dose",
+      "type": "Num",
+      "length": null,
+      "core": "Exp",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Amount of ECTRT when numeric. Not populated when ECDOSTXT is populated."
+    },
+    {
+      "order": "18",
+      "name": "ECDOSTXT",
+      "label": "Dose Description",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Amount of ECTRT when non-numeric. Dosing amounts or a range of dosing information collected in text form. Example: \"200-400\". Not populated when ECDOSE is populated."
+    },
+    {
+      "order": "19",
+      "name": "ECDOSU",
+      "label": "Dose Units",
+      "type": "Char",
+      "length": null,
+      "core": "Exp",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C71620",
+      "codelist_codes": [
+        "C71620"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C71620",
+      "description": "Units for ECDOSE, ECDOSTOT, or ECDOSTXT."
+    },
+    {
+      "order": "20",
+      "name": "ECDOSFRM",
+      "label": "Dose Form",
+      "type": "Char",
+      "length": null,
+      "core": "Exp",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66726",
+      "codelist_codes": [
+        "C66726"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66726",
+      "description": "Dose form for ECTRT. Examples: \"TABLET\", \"LOTION\"."
+    },
+    {
+      "order": "21",
+      "name": "ECDOSFRQ",
+      "label": "Dosing Frequency per Interval",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C71113",
+      "codelist_codes": [
+        "C71113"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C71113",
+      "description": "Usually expressed as the number of repeated administrations of ECDOSE within a specific time period. Examples: \"Q2H\", \"QD\", \"BID\"."
+    },
+    {
+      "order": "22",
+      "name": "ECDOSTOT",
+      "label": "Total Daily Dose",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Total daily dose of ECTRT using the units in ECDOSU. Used when dosing is collected as total daily dose."
+    },
+    {
+      "order": "23",
+      "name": "ECDOSRGM",
+      "label": "Intended Dose Regimen",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Text description of the intended schedule or regimen for the Intervention. Example: \"TWO WEEKS ON\", \"TWO WEEKS OFF\"."
+    },
+    {
+      "order": "24",
+      "name": "ECROUTE",
+      "label": "Route of Administration",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66729",
+      "codelist_codes": [
+        "C66729"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66729",
+      "description": "Route of administration for the intervention. Examples: \"ORAL\", \"INTRAVENOUS\"."
+    },
+    {
+      "order": "25",
+      "name": "ECLOT",
+      "label": "Lot Number",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Lot number of the ECTRT product."
+    },
+    {
+      "order": "26",
+      "name": "ECLOC",
+      "label": "Location of Dose Administration",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C74456",
+      "codelist_codes": [
+        "C74456"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C74456",
+      "description": "Specifies location of administration. Example: \"ARM\", \"LIP\"."
+    },
+    {
+      "order": "27",
+      "name": "ECLAT",
+      "label": "Laterality",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C99073",
+      "codelist_codes": [
+        "C99073"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C99073",
+      "description": "Qualifier for anatomical location further detailing laterality of the intervention administration. Examples: \"LEFT\", \"RIGHT\"."
+    },
+    {
+      "order": "28",
+      "name": "ECDIR",
+      "label": "Directionality",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C99074",
+      "codelist_codes": [
+        "C99074"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C99074",
+      "description": "Qualifier for anatomical location further detailing directionality. Examples: \"ANTERIOR\", \"LOWER\", \"PROXIMAL\", \"UPPER\"."
+    },
+    {
+      "order": "29",
+      "name": "ECPORTOT",
+      "label": "Portion or Totality",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C99075",
+      "codelist_codes": [
+        "C99075"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C99075",
+      "description": "Qualifier for anatomical location further detailing distribution (i.e., arrangement of, apportioning of). Examples: \"ENTIRE\", \"SINGLE\", \"SEGMENT\"."
+    },
+    {
+      "order": "30",
+      "name": "ECFAST",
+      "label": "Fasting Status",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "Indicator used to identify fasting status. Examples: \"Y\", \"N\"."
+    },
+    {
+      "order": "31",
+      "name": "ECPSTRG",
+      "label": "Pharmaceutical Strength",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Amount of an active ingredient expressed quantitatively per dosage unit, per unit of volume, or per unit of weight, according to the pharmaceutical dose form."
+    },
+    {
+      "order": "32",
+      "name": "ECPSTRGU",
+      "label": "Pharmaceutical Strength Units",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C71620",
+      "codelist_codes": [
+        "C71620"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C71620",
+      "description": "Unit for ECPSTRG. Examples: \"mg/TABLET\", \"mg/mL\"."
+    },
+    {
+      "order": "33",
+      "name": "ECADJ",
+      "label": "Reason for Dose Adjustment",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Describes reason or explanation of why a dose is adjusted."
+    },
+    {
+      "order": "34",
+      "name": "TAETORD",
+      "label": "Planned Order of Element within Arm",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Number that gives the planned order of the element within the arm."
+    },
+    {
+      "order": "35",
+      "name": "EPOCH",
+      "label": "Epoch",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C99079",
+      "codelist_codes": [
+        "C99079"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C99079",
+      "description": "Trial epoch of the exposure as collected record. Examples: \"RUN-IN\", \"TREATMENT\"."
+    },
+    {
+      "order": "36",
+      "name": "ECSTDTC",
+      "label": "Start Date/Time of Treatment",
+      "type": "Char",
+      "length": null,
+      "core": "Exp",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "The date/time when administration of the treatment indicated by ECTRT and ECDOSE began."
+    },
+    {
+      "order": "37",
+      "name": "ECENDTC",
+      "label": "End Date/Time of Treatment",
+      "type": "Char",
+      "length": null,
+      "core": "Exp",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "The date/time when administration of the treatment indicated by ECTRT and ECDOSE ended. For administrations considered given at a point in time (e.g., oral tablet, pre-filled syringe injection), where only an administration date/time is collected, ECSTDTC should be copied to ECENDTC as the standard representation."
+    },
+    {
+      "order": "38",
+      "name": "ECSTDY",
+      "label": "Study Day of Start of Treatment",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Study day of ECSTDTC relative to the sponsor-defined DM.RFSTDTC."
+    },
+    {
+      "order": "39",
+      "name": "ECENDY",
+      "label": "Study Day of End of Treatment",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Study day of ECENDTC relative to the sponsor-defined DM.RFSTDTC."
+    },
+    {
+      "order": "40",
+      "name": "ECDUR",
+      "label": "Duration of Treatment",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Collected duration of administration. Used only if collected on the CRF and not derived from start and end date/times."
+    },
+    {
+      "order": "41",
+      "name": "ECTPT",
+      "label": "Planned Time Point Name",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Text description of time when administration should occur. This may be represented as an elapsed time relative to a fixed reference point, such as time of last dose. See ECTPTNUM and ECTPTREF."
+    },
+    {
+      "order": "42",
+      "name": "ECTPTNUM",
+      "label": "Planned Time Point Number",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Numerical version of ECTPT to aid in sorting."
+    },
+    {
+      "order": "43",
+      "name": "ECELTM",
+      "label": "Planned Elapsed Time from Time Point Ref",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Planned elapsed time relative to the planned fixed reference (ECTPTREF). This variable is useful where there are repetitive measures. Not a clock time."
+    },
+    {
+      "order": "44",
+      "name": "ECTPTREF",
+      "label": "Time Point Reference",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Name of the fixed reference point referred to by ECELTM, ECTPTNUM, and ECTPT. Examples: \"PREVIOUS DOSE\", \"PREVIOUS MEAL\"."
+    },
+    {
+      "order": "45",
+      "name": "ECRFTDTC",
+      "label": "Date/Time of Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Date/time for a fixed reference time point defined by ECTPTREF."
+    }
+  ],
+  "variable_summary": {
+    "required": 5,
+    "expected": 5,
+    "permissible": 35
+  },
+  "codelist_codes_used": [
+    "C125923",
+    "C66726",
+    "C66729",
+    "C66742",
+    "C71113",
+    "C71620",
+    "C74456",
+    "C99073",
+    "C99074",
+    "C99075",
+    "C99079"
+  ],
+  "fetched_at": "2025-12-26T23:02:55.693108"
+}

@@ -1,0 +1,559 @@
+{
+  "domain": "HO",
+  "ig_version": "3-4",
+  "ct_version": "2025-09-26",
+  "total_codelists": 5,
+  "codelists": [
+    {
+      "codelist_code": "C171444",
+      "name": "Health Care Encounters Dictionary Derived Term",
+      "extensible": "true",
+      "total_terms": 38,
+      "terms": [
+        {
+          "code": "C198260",
+          "submission_value": "ADULT DAYCARE FACILITY VISIT",
+          "preferred_term": "Adult Daycare Facility Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional at an adult daycare facility.",
+          "synonyms": []
+        },
+        {
+          "code": "C171501",
+          "submission_value": "CARDIAC CATHETERIZATION LABORATORY VISIT",
+          "preferred_term": "Cardiac Catheterization Laboratory Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional at a cardiac catheterization unit.",
+          "synonyms": []
+        },
+        {
+          "code": "C171502",
+          "submission_value": "CARDIAC INTENSIVE CARE UNIT STAY",
+          "preferred_term": "Cardiac Intensive Care Unit Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a cardiac intensive care unit in a hospital.",
+          "synonyms": [
+            "CICU Stay",
+            "Coronary Intensive Care Unit Stay"
+          ]
+        },
+        {
+          "code": "C177950",
+          "submission_value": "CARDIOLOGY UNIT VISIT",
+          "preferred_term": "Cardiology Unit Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional at a cardiology unit in a hospital.",
+          "synonyms": []
+        },
+        {
+          "code": "C199845",
+          "submission_value": "DAY HOSPITAL VISIT",
+          "preferred_term": "Day Hospital Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional at a day hospital.",
+          "synonyms": []
+        },
+        {
+          "code": "C177948",
+          "submission_value": "DIETARY SPECIALIST VISIT",
+          "preferred_term": "Dietary Specialist Visit",
+          "definition": "The subject or patient has interacted with a dietary specialist.",
+          "synonyms": []
+        },
+        {
+          "code": "C176294",
+          "submission_value": "EMERGENCY ROOM VISIT",
+          "preferred_term": "Emergency Room Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional at an emergency room.",
+          "synonyms": []
+        },
+        {
+          "code": "C171509",
+          "submission_value": "GENERAL WARD STAY",
+          "preferred_term": "General Ward Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a general medical unit of a hospital.",
+          "synonyms": [
+            "General Medical Unit Stay"
+          ]
+        },
+        {
+          "code": "C177947",
+          "submission_value": "HEALTHCARE PROFESSIONAL VISIT",
+          "preferred_term": "Healthcare Professional Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional.",
+          "synonyms": []
+        },
+        {
+          "code": "C184507",
+          "submission_value": "HOME HEALTHCARE VISIT",
+          "preferred_term": "Home Healthcare Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional within a residence.",
+          "synonyms": []
+        },
+        {
+          "code": "C201382",
+          "submission_value": "HOME HOSPICE VISIT",
+          "preferred_term": "Home Hospice Visit",
+          "definition": "The subject or patient has interacted with a hospice aide at home.",
+          "synonyms": []
+        },
+        {
+          "code": "C198261",
+          "submission_value": "HOSPICE FACILITY STAY",
+          "preferred_term": "Hospice Facility Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a hospice facility.",
+          "synonyms": []
+        },
+        {
+          "code": "C171453",
+          "submission_value": "HOSPITAL STAY",
+          "preferred_term": "Hospital Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a hospital.",
+          "synonyms": [
+            "Inpatient Hospital Stay",
+            "Inpatient Hospitalization"
+          ]
+        },
+        {
+          "code": "C201384",
+          "submission_value": "IMAGING CENTER VISIT",
+          "preferred_term": "Imaging Center Encounter",
+          "definition": "The subject or patient has interacted with a healthcare professional at an imaging center.",
+          "synonyms": [
+            "Imaging Facility Visit"
+          ]
+        },
+        {
+          "code": "C199846",
+          "submission_value": "INFUSION CENTER VISIT",
+          "preferred_term": "Infusion Center Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional at an infusion center.",
+          "synonyms": []
+        },
+        {
+          "code": "C171454",
+          "submission_value": "INTENSIVE CARE UNIT STAY",
+          "preferred_term": "Intensive Care Unit Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a intensive care unit in a hospital.",
+          "synonyms": [
+            "ICU Stay"
+          ]
+        },
+        {
+          "code": "C201383",
+          "submission_value": "LABORATORY VISIT",
+          "preferred_term": "Laboratory Encounter",
+          "definition": "The subject or patient has interacted with a healthcare professional in a laboratory.",
+          "synonyms": []
+        },
+        {
+          "code": "C199848",
+          "submission_value": "LONG TERM ACUTE CARE STAY",
+          "preferred_term": "Long Term Acute Care Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a long term acute care facility.",
+          "synonyms": []
+        },
+        {
+          "code": "C199849",
+          "submission_value": "LONG TERM SUBACUTE CARE STAY",
+          "preferred_term": "Long Term Subacute Care Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a long term subacute care facility.",
+          "synonyms": []
+        },
+        {
+          "code": "C177949",
+          "submission_value": "MENTAL HEALTH SPECIALIST VISIT",
+          "preferred_term": "Mental Health Specialist Visit",
+          "definition": "The subject or patient has interacted with a mental health specialist.",
+          "synonyms": []
+        },
+        {
+          "code": "C171517",
+          "submission_value": "NEURO INTENSIVE CARE UNIT STAY",
+          "preferred_term": "Neuro Intensive Care Unit Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a neuro-intensive care unit in a hospital.",
+          "synonyms": [
+            "Neuro-ICU Stay",
+            "Neuro-Trauma ICU Stay"
+          ]
+        },
+        {
+          "code": "C171518",
+          "submission_value": "NURSING HOME STAY",
+          "preferred_term": "Nursing Home Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a nursing home.",
+          "synonyms": []
+        },
+        {
+          "code": "C199850",
+          "submission_value": "OPERATING ROOM VISIT",
+          "preferred_term": "Operating Room Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional in an operating room.",
+          "synonyms": [
+            "OR Visit"
+          ]
+        },
+        {
+          "code": "C154474",
+          "submission_value": "OUTPATIENT CLINIC VISIT",
+          "preferred_term": "Ambulatory Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional at an outpatient clinic.",
+          "synonyms": [
+            "Ambulatory Care Clinic Visit",
+            "Ambulatory Care Facility Visit",
+            "Ambulatory Center Visit"
+          ]
+        },
+        {
+          "code": "C201489",
+          "submission_value": "PALLIATIVE CARE UNIT STAY",
+          "preferred_term": "Palliative Care Unit Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a palliative care unit.",
+          "synonyms": []
+        },
+        {
+          "code": "C171520",
+          "submission_value": "PHYSICAL THERAPY FACILITY VISIT",
+          "preferred_term": "Physical Therapy Facility Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional at a physical therapy facility.",
+          "synonyms": []
+        },
+        {
+          "code": "C199851",
+          "submission_value": "POST-ANESTHESIA CARE UNIT VISIT",
+          "preferred_term": "Post-Anesthesia Care Unit Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional in a post-anesthesia care unit.",
+          "synonyms": [
+            "PACU Visit",
+            "Recovery Room Visit"
+          ]
+        },
+        {
+          "code": "C176292",
+          "submission_value": "PRIMARY CARE PHYSICIAN'S OFFICE VISIT",
+          "preferred_term": "Primary Care Physician's Office Visit",
+          "definition": "The subject or patient has interacted with a primary care physician.",
+          "synonyms": []
+        },
+        {
+          "code": "C171522",
+          "submission_value": "PSYCHIATRIC WARD STAY",
+          "preferred_term": "Psychiatric Ward Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a psychiatric ward.",
+          "synonyms": []
+        },
+        {
+          "code": "C171523",
+          "submission_value": "REHABILITATION FACILITY STAY",
+          "preferred_term": "Rehabilitation Facility Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a rehabilitation facility.",
+          "synonyms": []
+        },
+        {
+          "code": "C201488",
+          "submission_value": "SHORT TERM ACUTE CARE STAY",
+          "preferred_term": "Short Term Acute Care Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a short term acute care facility.",
+          "synonyms": []
+        },
+        {
+          "code": "C171534",
+          "submission_value": "SKILLED NURSING FACILITY STAY",
+          "preferred_term": "Skilled Nursing Facility Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a skilled nursing facility.",
+          "synonyms": []
+        },
+        {
+          "code": "C176293",
+          "submission_value": "SPECIALTY CARE PHYSICIAN'S OFFICE VISIT",
+          "preferred_term": "Specialty Care Physician's Office Visit",
+          "definition": "The subject or patient has interacted with a specialty care physician.",
+          "synonyms": []
+        },
+        {
+          "code": "C171535",
+          "submission_value": "SURGICAL INTENSIVE CARE UNIT STAY",
+          "preferred_term": "Surgical Intensive Care Unit Stay",
+          "definition": "The subject or patient has been admitted as an inpatient to a surgical intensive care unit in a hospital.",
+          "synonyms": [
+            "SICU Stay"
+          ]
+        },
+        {
+          "code": "C199852",
+          "submission_value": "SURGICAL UNIT VISIT",
+          "preferred_term": "Surgical Unit Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional in a surgical unit.",
+          "synonyms": []
+        },
+        {
+          "code": "C209564",
+          "submission_value": "URGENT CARE CENTER VISIT",
+          "preferred_term": "Urgent Care Center Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional at an urgent care center.",
+          "synonyms": []
+        },
+        {
+          "code": "C150759",
+          "submission_value": "VIRTUAL VISIT",
+          "preferred_term": "Virtual Patient Encounter",
+          "definition": "The subject or patient has interacted with a healthcare professional remotely, using telecommunications technology.",
+          "synonyms": []
+        },
+        {
+          "code": "C199847",
+          "submission_value": "VIRTUAL VISIT, TELEPHONE",
+          "preferred_term": "Phone Virtual Visit",
+          "definition": "The subject or patient has interacted with a healthcare professional remotely, using a telephone.",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "codelist_code": "C66728",
+      "name": "Relation to Reference Period",
+      "extensible": "false",
+      "total_terms": 8,
+      "terms": [
+        {
+          "code": "C38008",
+          "submission_value": "AFTER",
+          "preferred_term": "Post",
+          "definition": "The time period following a point or another period of time. (NCI)",
+          "synonyms": []
+        },
+        {
+          "code": "C25629",
+          "submission_value": "BEFORE",
+          "preferred_term": "Prior",
+          "definition": "Earlier in time or order. (NCI)",
+          "synonyms": []
+        },
+        {
+          "code": "C184710",
+          "submission_value": "BEFORE/DURING",
+          "preferred_term": "Before or During",
+          "definition": "Before or at some point in a given period of time.",
+          "synonyms": []
+        },
+        {
+          "code": "C25456",
+          "submission_value": "COINCIDENT",
+          "preferred_term": "Concurrent",
+          "definition": "Occurring or operating at the same time.",
+          "synonyms": []
+        },
+        {
+          "code": "C25490",
+          "submission_value": "DURING",
+          "preferred_term": "During",
+          "definition": "At some point in a given period of time. (NCI)",
+          "synonyms": []
+        },
+        {
+          "code": "C49640",
+          "submission_value": "DURING/AFTER",
+          "preferred_term": "During or After",
+          "definition": "Within a certain period of time or after a certain point or period in time. (NCI)",
+          "synonyms": []
+        },
+        {
+          "code": "C53279",
+          "submission_value": "ONGOING",
+          "preferred_term": "Continue",
+          "definition": "Remain in force or carry on without letup; keep or maintain in unaltered condition; exist in time or space without stop or interruption. (NCI)",
+          "synonyms": [
+            "Continuous"
+          ]
+        },
+        {
+          "code": "C17998",
+          "submission_value": "UNKNOWN",
+          "preferred_term": "Unknown",
+          "definition": "Not known, not observed, not recorded, or refused. (NCI)",
+          "synonyms": [
+            "U",
+            "UNK",
+            "Unknown"
+          ]
+        }
+      ]
+    },
+    {
+      "codelist_code": "C66742",
+      "name": "No Yes Response",
+      "extensible": "false",
+      "total_terms": 4,
+      "terms": [
+        {
+          "code": "C49487",
+          "submission_value": "N",
+          "preferred_term": "No",
+          "definition": "The non-affirmative response to a question. (NCI)",
+          "synonyms": [
+            "No"
+          ]
+        },
+        {
+          "code": "C48660",
+          "submission_value": "NA",
+          "preferred_term": "Not Applicable",
+          "definition": "Determination of a value is not relevant in the current context. (NCI)",
+          "synonyms": [
+            "NA",
+            "Not Applicable"
+          ]
+        },
+        {
+          "code": "C17998",
+          "submission_value": "U",
+          "preferred_term": "Unknown",
+          "definition": "Not known, not observed, not recorded, or refused. (NCI)",
+          "synonyms": [
+            "U",
+            "UNK",
+            "Unknown"
+          ]
+        },
+        {
+          "code": "C49488",
+          "submission_value": "Y",
+          "preferred_term": "Yes",
+          "definition": "The affirmative response to a question. (NCI)",
+          "synonyms": [
+            "Yes"
+          ]
+        }
+      ]
+    },
+    {
+      "codelist_code": "C66789",
+      "name": "Not Done",
+      "extensible": "false",
+      "total_terms": 1,
+      "terms": [
+        {
+          "code": "C49484",
+          "submission_value": "NOT DONE",
+          "preferred_term": "Not Done",
+          "definition": "Indicates a task, process or examination that has either not been initiated or completed. (NCI)",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "codelist_code": "C99079",
+      "name": "Epoch",
+      "extensible": "true",
+      "total_terms": 15,
+      "terms": [
+        {
+          "code": "C125938",
+          "submission_value": "BASELINE",
+          "preferred_term": "Baseline Epoch",
+          "definition": "A period in a clinical study after eligibility has been met and before the start of treatment, at which baseline measurements are collected.",
+          "synonyms": []
+        },
+        {
+          "code": "C102255",
+          "submission_value": "BLINDED TREATMENT",
+          "preferred_term": "Blinded Treatment Epoch",
+          "definition": "A period in a clinical study during which subjects receive blinded therapeutic treatment.",
+          "synonyms": []
+        },
+        {
+          "code": "C123452",
+          "submission_value": "CONTINUATION TREATMENT",
+          "preferred_term": "Continuation Therapy Epoch",
+          "definition": "A period in a clinical study during which subjects receive continuation treatment.",
+          "synonyms": [
+            "Continuation Phase"
+          ]
+        },
+        {
+          "code": "C202578",
+          "submission_value": "FOLLOW-UP",
+          "preferred_term": "Follow-Up Epoch",
+          "definition": "A period in a clinical study during which information about the health status of an individual is obtained after study interventions have concluded.",
+          "synonyms": []
+        },
+        {
+          "code": "C123453",
+          "submission_value": "INDUCTION TREATMENT",
+          "preferred_term": "Induction Therapy Epoch",
+          "definition": "A period in a clinical study during which subjects receive induction treatment.",
+          "synonyms": [
+            "Induction Phase",
+            "Intensive Phase"
+          ]
+        },
+        {
+          "code": "C209541",
+          "submission_value": "INTERVENTION",
+          "preferred_term": "Investigational Intervention Epoch",
+          "definition": "A period in a study during which subjects are receiving investigational intervention(s).",
+          "synonyms": []
+        },
+        {
+          "code": "C202577",
+          "submission_value": "LONG-TERM FOLLOW-UP",
+          "preferred_term": "Long-term Follow-up Epoch",
+          "definition": "A period in a clinical study during which information about the health status of an individual is obtained long after study interventions have concluded.",
+          "synonyms": []
+        },
+        {
+          "code": "C165873",
+          "submission_value": "OBSERVATION",
+          "preferred_term": "Observation Study Epoch",
+          "definition": "A period in a clinical study during which subjects are observed, without any planned intervention.",
+          "synonyms": []
+        },
+        {
+          "code": "C102256",
+          "submission_value": "OPEN LABEL TREATMENT",
+          "preferred_term": "Open Label Treatment Epoch",
+          "definition": "A period in a clinical study during which subjects receive open label therapeutic treatment.",
+          "synonyms": []
+        },
+        {
+          "code": "C199844",
+          "submission_value": "PRE-SCREENING",
+          "preferred_term": "Pre-Screening Epoch",
+          "definition": "A period in a clinical study during which subjects are evaluated prior to entering the full screening period.",
+          "synonyms": []
+        },
+        {
+          "code": "C210380",
+          "submission_value": "PRODUCT EXPOSURE",
+          "preferred_term": "Product Exposure Epoch",
+          "definition": "A period in a clinical study during which subjects are exposed to the product.",
+          "synonyms": []
+        },
+        {
+          "code": "C98779",
+          "submission_value": "RUN-IN",
+          "preferred_term": "Run-in Period",
+          "definition": "A period in a clinical study that occurs after screening and before randomization, during which the subject is further evaluated and/or prepared for the commencement of the clinical study investigatio",
+          "synonyms": []
+        },
+        {
+          "code": "C202487",
+          "submission_value": "SCREENING",
+          "preferred_term": "Screening Epoch",
+          "definition": "A period in a clinical study during which subjects are evaluated for participation in the study.",
+          "synonyms": []
+        },
+        {
+          "code": "C101526",
+          "submission_value": "TREATMENT",
+          "preferred_term": "Treatment Epoch",
+          "definition": "A period in a study during which subjects are receiving investigational therapy or treatment.",
+          "synonyms": []
+        },
+        {
+          "code": "C42872",
+          "submission_value": "WASHOUT",
+          "preferred_term": "Washout Period",
+          "definition": "The interval of time that a participant enrolled in a study must not receive a specified treatment(s) before starting a study intervention(s). (CDISC Glossary)",
+          "synonyms": []
+        }
+      ]
+    }
+  ],
+  "fetched_at": "2025-12-26T22:13:10.835895"
+}

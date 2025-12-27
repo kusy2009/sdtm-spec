@@ -1,0 +1,676 @@
+{
+  "domain": "MB",
+  "label": "Microbiology Specimen",
+  "class": "Findings",
+  "class_href": "/mdr/sdtmig/3-4/classes/Findings",
+  "ig_version": "3-4",
+  "total_variables": 47,
+  "variables": [
+    {
+      "order": "1",
+      "name": "STUDYID",
+      "label": "Study Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Unique identifier for a study."
+    },
+    {
+      "order": "2",
+      "name": "DOMAIN",
+      "label": "Domain Abbreviation",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Two-character abbreviation for the domain."
+    },
+    {
+      "order": "3",
+      "name": "USUBJID",
+      "label": "Unique Subject Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identifier used to uniquely identify a subject across all studies for all applications or submissions involving the product."
+    },
+    {
+      "order": "4",
+      "name": "FOCID",
+      "label": "Focus of Study-Specific Interest",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identification of a focus of study-specific interest on or within a subject or specimen as called out in the protocol for which a measurement, test, or examination was performed. The value in this variable should have inherent semantic meaning."
+    },
+    {
+      "order": "5",
+      "name": "MBSEQ",
+      "label": "Sequence Number",
+      "type": "Num",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Sequence number to ensure uniqueness of records within a dataset for a subject. May be any valid number."
+    },
+    {
+      "order": "6",
+      "name": "MBGRPID",
+      "label": "Group ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Optional group identifier, used to link together a block of related records within a subject in a domain."
+    },
+    {
+      "order": "7",
+      "name": "MBREFID",
+      "label": "Reference ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Internal or external specimen identifier (e.g., sample ID for a subject sample from which a microbial culture was generated)."
+    },
+    {
+      "order": "8",
+      "name": "MBSPID",
+      "label": "Sponsor-Defined Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Sponsor-defined reference number. May be preprinted on the CRF as an explicit line identifier or defined in the sponsor's operational database."
+    },
+    {
+      "order": "9",
+      "name": "MBLNKID",
+      "label": "Link ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identifier used to link related records across domains. This may be a one-to-one or a one-to-many relationship. For example, it may be used to link genetic findings (in the PF domain) about a microbe to the original culture of that microbe (in MB), or to susceptibility records (in MS) if needed."
+    },
+    {
+      "order": "10",
+      "name": "MBLNKGRP",
+      "label": "Link Group ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identifier used to link related records across domains. This will usually be a many-to-one relationship."
+    },
+    {
+      "order": "11",
+      "name": "MBTESTCD",
+      "label": "Microbiology Test or Finding Short Name",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Topic",
+      "codelist": "Version-agnostic anchor resource for codelist C120527",
+      "codelist_codes": [
+        "C120527"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C120527",
+      "description": "Short name of the measurement, test, or finding described in MBTEST. It can be used as a column name when converting a dataset from a vertical to a horizontal format. The value in MBTESTCD cannot be longer than 8 characters, nor can it start with a number (e.g., \"1TEST\" is not valid). MBTESTCD cannot contain characters other than letters, numbers, or underscores. Examples: \"MCORGIDN\" for Microbial Organism Identification \"GMNCOC\" for Gram Negative Cocci."
+    },
+    {
+      "order": "12",
+      "name": "MBTEST",
+      "label": "Microbiology Test or Finding Name",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Synonym Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C120528",
+      "codelist_codes": [
+        "C120528"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C120528",
+      "description": "Verbatim name of the test or examination used to obtain the measurement or finding. The value in MBTEST cannot be longer than 40 characters. Examples: \"Microbial Organism Identification\", \"Gram Negative Cocci\", \"HIV-1 RNA\"."
+    },
+    {
+      "order": "13",
+      "name": "MBTSTDTL",
+      "label": "Measurement, Test or Examination Detail",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C174225",
+      "codelist_codes": [
+        "C174225"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C174225",
+      "description": "Further description of MBTESTCD and MBTEST. Example: \"VIRAL LOAD\" when MBTESTCD represents viral genetic material, such as \"HCRNA\", \"QUANTIFICATION\" when MBTESTCD represents any organism being quantified."
+    },
+    {
+      "order": "14",
+      "name": "MBCAT",
+      "label": "Category",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Grouping Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used to define a category of related records."
+    },
+    {
+      "order": "15",
+      "name": "MBSCAT",
+      "label": "Subcategory",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Grouping Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used to define a further categorization of MBCAT values."
+    },
+    {
+      "order": "16",
+      "name": "MBORRES",
+      "label": "Result or Finding in Original Units",
+      "type": "Char",
+      "length": null,
+      "core": "Exp",
+      "role": "Result Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Result of the microbiology measurement or finding as originally received or collected. Examples for \"GRAM STAIN\" findings: \"+3 MODERATE\", \"+2 FEW\", \"<10\". Examples for \"CULTURE PLATE\" findings: \"KLEBSIELLA PNEUMONIAE\", \"STREPTOCOCCUS PNEUMONIAE\"."
+    },
+    {
+      "order": "17",
+      "name": "MBORRESU",
+      "label": "Original Units",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C71620",
+      "codelist_codes": [
+        "C71620"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C71620",
+      "description": "Original unit for MBORRES. Example: \"mcg/mL\"."
+    },
+    {
+      "order": "18",
+      "name": "MBSTRESC",
+      "label": "Result or Finding in Standard Format",
+      "type": "Char",
+      "length": null,
+      "core": "Exp",
+      "role": "Result Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Contains the result value for all findings copied or derived from MBORRES, in a standard format or standard units. MBSTRESC should store all results or findings in character format; if results are numeric, they should also be stored in numeric format in MBSTRESN. For example, if a test has results \"+3 MODERATE\", \"MOD\", and \"MODERATE\" in MBORRES and these results effectively have the same meaning, they could be represented in standard format in MBSTRESC as \"MODERATE\"."
+    },
+    {
+      "order": "19",
+      "name": "MBSTRESN",
+      "label": "Numeric Result/Finding in Standard Units",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Result Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used for continuous or numeric results or findings in standard format; copied in numeric format from MBSTRESC. MBSTRESN should store all numeric test results or findings."
+    },
+    {
+      "order": "20",
+      "name": "MBSTRESU",
+      "label": "Standard Units",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C71620",
+      "codelist_codes": [
+        "C71620"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C71620",
+      "description": "Standardized units used for MBSTRESC and MBSTRESN."
+    },
+    {
+      "order": "21",
+      "name": "MBRESCAT",
+      "label": "Result Category",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used to categorize the result of a finding in a standard format."
+    },
+    {
+      "order": "22",
+      "name": "MBSTAT",
+      "label": "Completion Status",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66789",
+      "codelist_codes": [
+        "C66789"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66789",
+      "description": "Used to indicate that a question was not asked or a test was not done, or that a test was attempted but did not generate a result. Should be null or have a value of \"NOT DONE\"."
+    },
+    {
+      "order": "23",
+      "name": "MBREASND",
+      "label": "Reason Not Done",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Reason not done. Used in conjunction with MBSTAT when value is NOT DONE. Examples: \"BROKEN EQUIPMENT\", \"SUBJECT REFUSED\"."
+    },
+    {
+      "order": "24",
+      "name": "MBNAM",
+      "label": "Laboratory/Vendor Name",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Name or identifier of the vendor (e.g., laboratory) that provided the test results."
+    },
+    {
+      "order": "25",
+      "name": "MBLOINC",
+      "label": "LOINC Code",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Synonym Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Logical Observation Identifiers Names and Codes (LOINC) code for the topic variable (e.g., lab test)."
+    },
+    {
+      "order": "26",
+      "name": "MBSPEC",
+      "label": "Specimen Material Type",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C78734",
+      "codelist_codes": [
+        "C78734"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C78734",
+      "description": "Defines the type of specimen used for a measurement. Examples: \"SPUTUM\", \"BLOOD\", \"PUS\"."
+    },
+    {
+      "order": "27",
+      "name": "MBSPCCND",
+      "label": "Specimen Condition",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C78733",
+      "codelist_codes": [
+        "C78733"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C78733",
+      "description": "Free or standardized text describing the condition of the specimen. Example: \"CONTAMINATED\"."
+    },
+    {
+      "order": "28",
+      "name": "MBLOC",
+      "label": "Specimen Collection Location",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C74456",
+      "codelist_codes": [
+        "C74456"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C74456",
+      "description": "Anatomical location relevant to the collection of the measurement."
+    },
+    {
+      "order": "29",
+      "name": "MBLAT",
+      "label": "Laterality",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C99073",
+      "codelist_codes": [
+        "C99073"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C99073",
+      "description": "Qualifier for specimen collection location further detailing laterality. Examples: \"RIGHT\", \"LEFT\", \"BILATERAL\"."
+    },
+    {
+      "order": "30",
+      "name": "MBDIR",
+      "label": "Directionality",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C99074",
+      "codelist_codes": [
+        "C99074"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C99074",
+      "description": "Qualifier for specimen collection location further detailing directionality. Examples: \"ANTERIOR\", \"LOWER\", \"PROXIMAL\"."
+    },
+    {
+      "order": "31",
+      "name": "MBMETHOD",
+      "label": "Method of Test or Examination",
+      "type": "Char",
+      "length": null,
+      "core": "Exp",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C85492",
+      "codelist_codes": [
+        "C85492"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C85492",
+      "description": "Method of the test or examination. Examples: \"GRAM STAIN\", \"MICROBIAL CULTURE, LIQUID\", \"QUANTITATIVE REVERSE TRANSCRIPTASE POLYMERASE CHAIN REACTION\"."
+    },
+    {
+      "order": "32",
+      "name": "MBLOBXFL",
+      "label": "Last Observation Before Exposure Flag",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "Operationally derived indicator used to identify the last non-missing value prior to RFXSTDTC. The value should be \"Y\" or null."
+    },
+    {
+      "order": "33",
+      "name": "MBBLFL",
+      "label": "Baseline Flag",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "Indicator used to identify a baseline value. Should be \"Y\" or null. Note that MBBLFL is retained for backward compatibility. The authoritative baseline for statistical analysis is in an ADaM dataset."
+    },
+    {
+      "order": "34",
+      "name": "MBFAST",
+      "label": "Fasting Status",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "Indicator used to identify fasting status. Valid values include \"Y\", \"N\", \"U\", or null if not relevant."
+    },
+    {
+      "order": "35",
+      "name": "MBDRVFL",
+      "label": "Derived Flag",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "Used to indicate a derived record (e.g., a record that represents the average of other records such as a computed baseline). Should be \"Y\" or null."
+    },
+    {
+      "order": "36",
+      "name": "VISITNUM",
+      "label": "Visit Number",
+      "type": "Num",
+      "length": null,
+      "core": "Exp",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Clinical encounter number. Numeric version of VISIT, used for sorting."
+    },
+    {
+      "order": "37",
+      "name": "VISIT",
+      "label": "Visit Name",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Protocol-defined description of a clinical encounter."
+    },
+    {
+      "order": "38",
+      "name": "VISITDY",
+      "label": "Planned Study Day of Visit",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Planned study day of VISIT. Should be an integer."
+    },
+    {
+      "order": "39",
+      "name": "TAETORD",
+      "label": "Planned Order of Element within Arm",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Number that gives the planned order of the element within the arm for the element which the specimen collection occurred."
+    },
+    {
+      "order": "40",
+      "name": "EPOCH",
+      "label": "Epoch",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C99079",
+      "codelist_codes": [
+        "C99079"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C99079",
+      "description": "Epoch associated with the date/time at which the specimen was collected."
+    },
+    {
+      "order": "41",
+      "name": "MBDTC",
+      "label": "Date/Time of Collection",
+      "type": "Char",
+      "length": null,
+      "core": "Exp",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Date/time of specimen collection."
+    },
+    {
+      "order": "42",
+      "name": "MBDY",
+      "label": "Study Day of Visit/Collection/Exam",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Study day of the specimen collection, measured as integer days. Algorithm for calculations must be relative to the sponsor-defined RFSTDTC variable in Demographics. This formula should be consistent across the submission."
+    },
+    {
+      "order": "43",
+      "name": "MBTPT",
+      "label": "Planned Time Point Name",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Text description of time when specimen should be taken. This may be represented as an elapsed time relative to a fixed reference point, such as time of last dose. See MBTPTNUM and MBTPTREF. Examples: \"Start\", \"5 min post\"."
+    },
+    {
+      "order": "44",
+      "name": "MBTPTNUM",
+      "label": "Planned Time Point Number",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Numeric version of MBTPT used in sorting."
+    },
+    {
+      "order": "45",
+      "name": "MBELTM",
+      "label": "Planned Elapsed Time from Time Point Ref",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Planned elapsed time (in ISO 8601) relative to a planned fixed reference (MBTPTREF). This variable is useful where there are repetitive measures. Not a clock time or a date time variable. Represented as an ISO 8601 duration. Examples: \"-PT15M\" to represent the period of 15 minutes prior to the reference point indicated by MBTPTREF, or \"PT8H\" to represent the period of 8 hours after the reference point indicated by MBTPTREF."
+    },
+    {
+      "order": "46",
+      "name": "MBTPTREF",
+      "label": "Time Point Reference",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Name of the fixed reference point referred to by MBELTM, MBTPTNUM, and MBTPT. Example: \"PREVIOUS DOSE\"."
+    },
+    {
+      "order": "47",
+      "name": "MBRFTDTC",
+      "label": "Date/Time of Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Date/time for a fixed reference time point, MBTPTREF."
+    }
+  ],
+  "variable_summary": {
+    "required": 6,
+    "expected": 5,
+    "permissible": 36
+  },
+  "codelist_codes_used": [
+    "C120527",
+    "C120528",
+    "C174225",
+    "C66742",
+    "C66789",
+    "C71620",
+    "C74456",
+    "C78733",
+    "C78734",
+    "C85492",
+    "C99073",
+    "C99074",
+    "C99079"
+  ],
+  "fetched_at": "2025-12-26T22:30:52.138436"
+}

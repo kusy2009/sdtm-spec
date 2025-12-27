@@ -1,0 +1,457 @@
+{
+  "domain": "CE",
+  "label": "Clinical Events",
+  "class": "Events",
+  "class_href": "/mdr/sdtmig/3-4/classes/Events",
+  "ig_version": "3-4",
+  "total_variables": 32,
+  "variables": [
+    {
+      "order": "1",
+      "name": "STUDYID",
+      "label": "Study Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Unique identifier for a study."
+    },
+    {
+      "order": "2",
+      "name": "DOMAIN",
+      "label": "Domain Abbreviation",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Two-character abbreviation for the domain."
+    },
+    {
+      "order": "3",
+      "name": "USUBJID",
+      "label": "Unique Subject Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identifier used to uniquely identify a subject across all studies for all applications or submissions involving the product."
+    },
+    {
+      "order": "4",
+      "name": "CESEQ",
+      "label": "Sequence Number",
+      "type": "Num",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Sequence number given to ensure uniqueness of subject records within a domain. May be any valid number."
+    },
+    {
+      "order": "5",
+      "name": "CEGRPID",
+      "label": "Group ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used to link together a block of related records for a subject within a domain."
+    },
+    {
+      "order": "6",
+      "name": "CEREFID",
+      "label": "Reference ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Internal or external identifier (e.g., lab specimen ID, UUID for an ECG waveform or medical image)."
+    },
+    {
+      "order": "7",
+      "name": "CESPID",
+      "label": "Sponsor-Defined Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Sponsor-defined identifier."
+    },
+    {
+      "order": "8",
+      "name": "CETERM",
+      "label": "Reported Term for the Clinical Event",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Topic",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Term for the medical condition or event. Most likely preprinted on CRF."
+    },
+    {
+      "order": "9",
+      "name": "CEDECOD",
+      "label": "Dictionary-Derived Term",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Synonym Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Controlled terminology for the name of the clinical event. The sponsor is expected to provide the dictionary name and version used to map the terms utilizing the external codelist element in the Define-XML document."
+    },
+    {
+      "order": "10",
+      "name": "CECAT",
+      "label": "Category for the Clinical Event",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Grouping Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used to define a category of related records."
+    },
+    {
+      "order": "11",
+      "name": "CESCAT",
+      "label": "Subcategory for the Clinical Event",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Grouping Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "A further categorization of the condition or event."
+    },
+    {
+      "order": "12",
+      "name": "CEPRESP",
+      "label": "Clinical Event Pre-specified",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "Used to indicate whether the event in CETERM was prespecified. Value is \"Y\" for prespecified events and null for spontaneously reported events."
+    },
+    {
+      "order": "13",
+      "name": "CEOCCUR",
+      "label": "Clinical Event Occurrence",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "Used when the occurrence of specific events is solicited, to indicate whether or not a clinical event occurred. Values are null for spontaneously reported events."
+    },
+    {
+      "order": "14",
+      "name": "CESTAT",
+      "label": "Completion Status",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66789",
+      "codelist_codes": [
+        "C66789"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66789",
+      "description": "The status indicates that a question from a prespecified list was not answered."
+    },
+    {
+      "order": "15",
+      "name": "CEREASND",
+      "label": "Reason Clinical Event Not Collected",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Describes the reason clinical event data was not collected. Used in conjunction with CESTAT when value is \"NOT DONE\"."
+    },
+    {
+      "order": "16",
+      "name": "CEBODSYS",
+      "label": "Body System or Organ Class",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Dictionary-derived. Body system or organ class that is involved in an event or measurement from a standard hierarchy (e.g., MedDRA). When using a multi-axial dictionary such as MedDRA, this should contain the SOC used for the sponsor's analyses and summary tables, which may not necessarily be the primary SOC."
+    },
+    {
+      "order": "17",
+      "name": "CESEV",
+      "label": "Severity/Intensity",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C165643",
+      "codelist_codes": [
+        "C165643"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C165643",
+      "description": "The severity or intensity of the event. Examples: \"MILD\", \"MODERATE\", \"SEVERE\"."
+    },
+    {
+      "order": "18",
+      "name": "CETOXGR",
+      "label": "Standard Toxicity Grade",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Toxicity grade according to a standard toxicity scale (e.g., Common Terminology Criteria for Adverse Events (CTCAE) v3.0). Sponsor should specify name of the scale and version used in the metadata. If value is from a numeric scale, represent only the number (e.g., \"2\", not \"Grade 2\")."
+    },
+    {
+      "order": "19",
+      "name": "TAETORD",
+      "label": "Planned Order of Element within Arm",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Number that gives the planned order of the element within the arm for the element in which the clinical event started."
+    },
+    {
+      "order": "20",
+      "name": "EPOCH",
+      "label": "Epoch",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C99079",
+      "codelist_codes": [
+        "C99079"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C99079",
+      "description": "Epoch associated with the start date/time of the clinical event."
+    },
+    {
+      "order": "21",
+      "name": "CEDTC",
+      "label": "Date/Time of Event Collection",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Collection date and time for the clinical event observation represented in ISO 8601 character format."
+    },
+    {
+      "order": "22",
+      "name": "CESTDTC",
+      "label": "Start Date/Time of Clinical Event",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Start date/time of the clinical event represented in ISO 8601 character format."
+    },
+    {
+      "order": "23",
+      "name": "CEENDTC",
+      "label": "End Date/Time of Clinical Event",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "End date/time of the clinical event, represented in ISO 8601 character format."
+    },
+    {
+      "order": "24",
+      "name": "CEDY",
+      "label": "Study Day of Event Collection",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Study day of clinical event collection, measured as integer days. Algorithm for calculations must be relative to the sponsor-defined RFSTDTC variable in Demographics. This formula should be consistent across the submission."
+    },
+    {
+      "order": "25",
+      "name": "CESTDY",
+      "label": "Study Day of Start of Event",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Actual study day of start of the clinical event expressed in integer days relative to the sponsor-defined RFSTDTC in Demographics."
+    },
+    {
+      "order": "26",
+      "name": "CEENDY",
+      "label": "Study Day of End of Event",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Actual study day of end of the clinical event expressed in integer days relative to the sponsor-defined RFSTDTC in Demographics."
+    },
+    {
+      "order": "27",
+      "name": "CESTRF",
+      "label": "Start Relative to Reference Period",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Describes the start of the clinical event relative to the sponsor-defined reference period. The sponsor-defined reference period is a continuous period of time defined by a discrete starting point and a discrete ending point (represented by RFSTDTC and RFENDTC in Demographics). \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7, Use of Relative Timing Variables."
+    },
+    {
+      "order": "28",
+      "name": "CEENRF",
+      "label": "End Relative to Reference Period",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Describes the end of the event relative to the sponsor-defined reference period. The sponsor-defined reference period is a continuous period of time defined by a discrete starting point and a discrete ending point (represented by RFSTDTC and RFENDTC in Demographics). \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7, Use of Relative Timing Variables."
+    },
+    {
+      "order": "29",
+      "name": "CESTRTPT",
+      "label": "Start Relative to Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Identifies the start of the observation as being before or after the reference time point defined by variable CESTTPT. \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7, Use of Relative Timing Variables."
+    },
+    {
+      "order": "30",
+      "name": "CESTTPT",
+      "label": "Start Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Description or date/time in ISO 8601 character format of the sponsor-defined reference point referred to by --STRTPT. Examples: \"2003-12-15\", \"VISIT 1\"."
+    },
+    {
+      "order": "31",
+      "name": "CEENRTPT",
+      "label": "End Relative to Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Identifies the end of the observation as being before or after the sponsor-defined reference time point defined by variable CEENTPT. \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7, Use of Relative Timing Variables."
+    },
+    {
+      "order": "32",
+      "name": "CEENTPT",
+      "label": "End Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Description or date/time in ISO 8601 character format of the reference point referred to by CEENRTPT. Examples: \"2003-12-25\", \"VISIT 2\"."
+    }
+  ],
+  "variable_summary": {
+    "required": 5,
+    "expected": 0,
+    "permissible": 27
+  },
+  "codelist_codes_used": [
+    "C165643",
+    "C66728",
+    "C66742",
+    "C66789",
+    "C99079"
+  ],
+  "fetched_at": "2025-12-27T00:32:54.661609"
+}

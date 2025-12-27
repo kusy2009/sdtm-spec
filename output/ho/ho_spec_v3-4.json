@@ -1,0 +1,401 @@
+{
+  "domain": "HO",
+  "label": "Healthcare Encounters",
+  "class": "Events",
+  "class_href": "/mdr/sdtmig/3-4/classes/Events",
+  "ig_version": "3-4",
+  "total_variables": 28,
+  "variables": [
+    {
+      "order": "1",
+      "name": "STUDYID",
+      "label": "Study Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Unique identifier for a study."
+    },
+    {
+      "order": "2",
+      "name": "DOMAIN",
+      "label": "Domain Abbreviation",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Two-character abbreviation for the domain."
+    },
+    {
+      "order": "3",
+      "name": "USUBJID",
+      "label": "Unique Subject Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identifier used to uniquely identify a subject across all studies for all applications or submissions involving the product."
+    },
+    {
+      "order": "4",
+      "name": "HOSEQ",
+      "label": "Sequence Number",
+      "type": "Num",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Sequence number given to ensure uniqueness of subject records within a domain. May be any valid number."
+    },
+    {
+      "order": "5",
+      "name": "HOGRPID",
+      "label": "Group ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used to tie together a block of related records in a single domain for a subject."
+    },
+    {
+      "order": "6",
+      "name": "HOREFID",
+      "label": "Reference ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Internal or external healthcare encounter identifier."
+    },
+    {
+      "order": "7",
+      "name": "HOSPID",
+      "label": "Sponsor-Defined Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Sponsor-defined identifier. May be preprinted on the CRF as an explicit line identifier or defined in the sponsor's operational database. Example: Line number on a Healthcare Encounters CRF page."
+    },
+    {
+      "order": "8",
+      "name": "HOTERM",
+      "label": "Healthcare Encounter Term",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Topic",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Verbatim or preprinted CRF term for the healthcare encounter."
+    },
+    {
+      "order": "9",
+      "name": "HODECOD",
+      "label": "Dictionary-Derived Term",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Synonym Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C171444",
+      "codelist_codes": [
+        "C171444"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C171444",
+      "description": "Dictionary or sponsor-defined derived text description of HOTERM or the modified topic variable (HOMODIFY)."
+    },
+    {
+      "order": "10",
+      "name": "HOCAT",
+      "label": "Category for Healthcare Encounter",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Grouping Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used to define a category of topic-related values."
+    },
+    {
+      "order": "11",
+      "name": "HOSCAT",
+      "label": "Subcategory for Healthcare Encounter",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Grouping Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "A further categorization of HOCAT values."
+    },
+    {
+      "order": "12",
+      "name": "HOPRESP",
+      "label": "Pre-Specified Healthcare Encounter",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "A value of \"Y\" indicates that this healthcare encounter event was prespecified on the CRF. Values are null for spontaneously reported events (i.e., those collected as free-text verbatim terms)."
+    },
+    {
+      "order": "13",
+      "name": "HOOCCUR",
+      "label": "Healthcare Encounter Occurrence",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "Used when the occurrence of specific healthcare encounters is solicited, to indicate whether an encounter occurred. Values are null for spontaneously reported events."
+    },
+    {
+      "order": "14",
+      "name": "HOSTAT",
+      "label": "Completion Status",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66789",
+      "codelist_codes": [
+        "C66789"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66789",
+      "description": "The status indicates that the prespecified question was not answered."
+    },
+    {
+      "order": "15",
+      "name": "HOREASND",
+      "label": "Reason Healthcare Encounter Not Done",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Describes the reason data for a prespecified event were not collected. Used in conjunction with HOSTAT when value is \"NOT DONE\"."
+    },
+    {
+      "order": "16",
+      "name": "TAETORD",
+      "label": "Planned Order of Element within Arm",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Number that gives the planned order of the element within the arm."
+    },
+    {
+      "order": "17",
+      "name": "EPOCH",
+      "label": "Epoch",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C99079",
+      "codelist_codes": [
+        "C99079"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C99079",
+      "description": "Epoch associated with the start date/time of the healthcare encounter. Examples: \"SCREENING\", \"TREATMENT\", \"FOLLOW-UP\"."
+    },
+    {
+      "order": "18",
+      "name": "HODTC",
+      "label": "Date/Time of Event Collection",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Collection date and time of the healthcare encounter."
+    },
+    {
+      "order": "19",
+      "name": "HOSTDTC",
+      "label": "Start Date/Time of Healthcare Encounter",
+      "type": "Char",
+      "length": null,
+      "core": "Exp",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Start date/time of the healthcare encounter (e.g., date of admission)."
+    },
+    {
+      "order": "20",
+      "name": "HOENDTC",
+      "label": "End Date/Time of Healthcare Encounter",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "End date/time of the healthcare encounter (e.g., date of discharge)."
+    },
+    {
+      "order": "21",
+      "name": "HODY",
+      "label": "Study Day of Event Collection",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Study day of event collection relative to the sponsor-defined RFSTDTC."
+    },
+    {
+      "order": "22",
+      "name": "HOSTDY",
+      "label": "Study Day of Start of Encounter",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Study day of the start of the healthcare encounter relative to the sponsor-defined RFSTDTC."
+    },
+    {
+      "order": "23",
+      "name": "HOENDY",
+      "label": "Study Day of End of Healthcare Encounter",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Study day of the end of the healthcare encounter relative to the sponsor-defined RFSTDTC."
+    },
+    {
+      "order": "24",
+      "name": "HODUR",
+      "label": "Duration of Healthcare Encounter",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Collected duration of the healthcare encounter. Used only if collected on the CRF and not derived from the start and end date/times. Example: \"P1DT2H\" (for 1 day, 2 hours)."
+    },
+    {
+      "order": "25",
+      "name": "HOSTRTPT",
+      "label": "Start Relative to Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Identifies the start of the observation as being before or after the sponsor-defined reference time point defined by variable --STTPT. \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7, Use of Relative Timing Variables."
+    },
+    {
+      "order": "26",
+      "name": "HOSTTPT",
+      "label": "Start Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Description or date/time in ISO 8601 character format of the sponsor-defined reference point referred to by STRTPT. Examples: \"2003-12-15\", \"VISIT 1\"."
+    },
+    {
+      "order": "27",
+      "name": "HOENRTPT",
+      "label": "End Relative to Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Identifies the end of the event as being before or after the reference time point defined by variable HOENTPT. \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7, Use of Relative Timing Variables."
+    },
+    {
+      "order": "28",
+      "name": "HOENTPT",
+      "label": "End Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Description or date/time in ISO 8601 character format of the reference point referred to by HOENRTPT. Examples: \"2003-12-25\", \"VISIT 2\"."
+    }
+  ],
+  "variable_summary": {
+    "required": 5,
+    "expected": 1,
+    "permissible": 22
+  },
+  "codelist_codes_used": [
+    "C171444",
+    "C66728",
+    "C66742",
+    "C66789",
+    "C99079"
+  ],
+  "fetched_at": "2025-12-26T22:13:10.835882"
+}

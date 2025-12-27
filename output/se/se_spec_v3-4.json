@@ -1,0 +1,190 @@
+{
+  "domain": "SE",
+  "label": "Subject Elements",
+  "class": "Special-Purpose",
+  "class_href": "/mdr/sdtmig/3-4/classes/SpecialPurpose",
+  "ig_version": "3-4",
+  "total_variables": 13,
+  "variables": [
+    {
+      "order": "1",
+      "name": "STUDYID",
+      "label": "Study Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Unique identifier for a study."
+    },
+    {
+      "order": "2",
+      "name": "DOMAIN",
+      "label": "Domain Abbreviation",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Two-character abbreviation for the domain."
+    },
+    {
+      "order": "3",
+      "name": "USUBJID",
+      "label": "Unique Subject Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identifier used to uniquely identify a subject across all studies for all applications or submissions involving the product."
+    },
+    {
+      "order": "4",
+      "name": "SESEQ",
+      "label": "Sequence Number",
+      "type": "Num",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Sequence number given to ensure uniqueness of subject records within a domain. Should be assigned to be consistent chronological order."
+    },
+    {
+      "order": "5",
+      "name": "ETCD",
+      "label": "Element Code",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Topic",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "1. ETCD (the companion to ELEMENT) is limited to 8 characters and does not have special character restrictions. These values should be short for ease of use in programming, but it is not expected that ETCD will need to serve as a variable name. \\n 2. If an encountered element differs from the planned element to the point that it is considered a new element, then use \"UNPLAN\" as the value for ETCD to represent this element."
+    },
+    {
+      "order": "6",
+      "name": "ELEMENT",
+      "label": "Description of Element",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Synonym Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "The name of the element. If ETCD has a value of \"UNPLAN\", then ELEMENT should be null."
+    },
+    {
+      "order": "7",
+      "name": "TAETORD",
+      "label": "Planned Order of Element within Arm",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Number that gives the planned order of the element within the subject's assigned trial arm."
+    },
+    {
+      "order": "8",
+      "name": "EPOCH",
+      "label": "Epoch",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C99079",
+      "codelist_codes": [
+        "C99079"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C99079",
+      "description": "Epoch associated with the element in the planned sequence of elements for the arm to which the subject was assigned."
+    },
+    {
+      "order": "9",
+      "name": "SESTDTC",
+      "label": "Start Date/Time of Element",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Start date/time for an element for each subject."
+    },
+    {
+      "order": "10",
+      "name": "SEENDTC",
+      "label": "End Date/Time of Element",
+      "type": "Char",
+      "length": null,
+      "core": "Exp",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "End date/time for an element for each subject."
+    },
+    {
+      "order": "11",
+      "name": "SESTDY",
+      "label": "Study Day of Start of Element",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Study day of start of element relative to the sponsor-defined RFSTDTC."
+    },
+    {
+      "order": "12",
+      "name": "SEENDY",
+      "label": "Study Day of End of Element",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Study day of end of element relative to the sponsor-defined RFSTDTC."
+    },
+    {
+      "order": "13",
+      "name": "SEUPDES",
+      "label": "Description of Unplanned Element",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Synonym Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Description of what happened to the subject during an unplanned element. Used only if ETCD has the value of \"UNPLAN\"."
+    }
+  ],
+  "variable_summary": {
+    "required": 6,
+    "expected": 1,
+    "permissible": 6
+  },
+  "codelist_codes_used": [
+    "C99079"
+  ],
+  "fetched_at": "2025-12-26T22:18:48.843178"
+}

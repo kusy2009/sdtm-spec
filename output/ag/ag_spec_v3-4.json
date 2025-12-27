@@ -1,0 +1,583 @@
+{
+  "domain": "AG",
+  "label": "Procedure Agents",
+  "class": "Interventions",
+  "class_href": "/mdr/sdtmig/3-4/classes/Interventions",
+  "ig_version": "3-4",
+  "total_variables": 41,
+  "variables": [
+    {
+      "order": "1",
+      "name": "STUDYID",
+      "label": "Study Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Unique identifier for a study."
+    },
+    {
+      "order": "2",
+      "name": "DOMAIN",
+      "label": "Domain Abbreviation",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Two-character abbreviation for the domain."
+    },
+    {
+      "order": "3",
+      "name": "USUBJID",
+      "label": "Unique Subject Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identifier used to uniquely identify a subject across all studies for all applications or submissions involving the product."
+    },
+    {
+      "order": "4",
+      "name": "AGSEQ",
+      "label": "Sequence Number",
+      "type": "Num",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Sequence number given to ensure uniqueness of subject records within a domain. May be any valid number."
+    },
+    {
+      "order": "5",
+      "name": "AGGRPID",
+      "label": "Group ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used to tie together a block of related records in a single domain for a subject."
+    },
+    {
+      "order": "6",
+      "name": "AGSPID",
+      "label": "Sponsor-Defined Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Sponsor-defined reference number. May be preprinted on the CRF as an explicit line identifier or defined in the sponsor's operational database. Example: Line number from the procedure or test page."
+    },
+    {
+      "order": "7",
+      "name": "AGLNKID",
+      "label": "Link ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identifier used to link related records across domains.This may be a one-to-one or a one-to-many relationship."
+    },
+    {
+      "order": "8",
+      "name": "AGLNKGRP",
+      "label": "Link Group ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identifier used to link related records across domains.This will usually be a many-to-one relationship."
+    },
+    {
+      "order": "9",
+      "name": "AGTRT",
+      "label": "Reported Agent Name",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Topic",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Verbatim medication name that is either preprinted or collected on a CRF."
+    },
+    {
+      "order": "10",
+      "name": "AGMODIFY",
+      "label": "Modified Reported Name",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Synonym Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "If AGTRT is modified to facilitate coding, then AGMODIFY will contain the modified text."
+    },
+    {
+      "order": "11",
+      "name": "AGDECOD",
+      "label": "Standardized Agent Name",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Synonym Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Standardized or dictionary-derived text description of AGTRT or AGMODIFY. Equivalent to the generic medication name in WHO Drug. The sponsor is expected to provide the dictionary name and version used to map the terms utilizing the external codelist element in the Define-XML document. If an intervention term does not have a decode value in the dictionary, then AGDECOD will be left blank."
+    },
+    {
+      "order": "12",
+      "name": "AGCAT",
+      "label": "Category for Agent",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Grouping Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used to define a category of agent. Examples: \"CHALLENGE AGENT\", \"PET TRACER\"."
+    },
+    {
+      "order": "13",
+      "name": "AGSCAT",
+      "label": "Subcategory for Agent",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Grouping Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Further categorization of agent."
+    },
+    {
+      "order": "14",
+      "name": "AGPRESP",
+      "label": "AG Pre-Specified",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "Used to indicate whether (\"Y\"/null) information about the use of a specific agent was solicited on the CRF."
+    },
+    {
+      "order": "15",
+      "name": "AGOCCUR",
+      "label": "AG Occurrence",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "When the use of specific agent is solicited, AGOCCUR is used to indicate whether (\"Y\"/\"N\") use of the agent occurred. Values are null for agents not specifically solicited."
+    },
+    {
+      "order": "16",
+      "name": "AGSTAT",
+      "label": "Completion Status",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66789",
+      "codelist_codes": [
+        "C66789"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66789",
+      "description": "Used to indicate that a question about a prespecified agent was not answered. Should be null or have a value of \"NOT DONE\"."
+    },
+    {
+      "order": "17",
+      "name": "AGREASND",
+      "label": "Reason Procedure Agent Not Collected",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Describes the reason a response to a question about the occurrence of a procedure agent was not collected. Used in conjunction with AGSTAT when value is \"NOT DONE\"."
+    },
+    {
+      "order": "18",
+      "name": "AGCLAS",
+      "label": "Agent Class",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Drug class. May be obtained from coding. When coding to a single class, populate with class value. If using a dictionary and coding to multiple classes, follow guidance in Section 4.2.8.3, Multiple Values for a Non-result Qualifier Variable, or omit AGCLAS."
+    },
+    {
+      "order": "19",
+      "name": "AGCLASCD",
+      "label": "Agent Class Code",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Class code corresponding to AGCLAS. Drug class. May be obtained from coding. When coding to a single class, populate with class code. If using a dictionary and coding to multiple classes, follow guidance in Section 4.2.8.3, Multiple Values for a Non-result Qualifier Variable, or omit AGCLASCD."
+    },
+    {
+      "order": "20",
+      "name": "AGDOSE",
+      "label": "Dose per Administration",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Amount of AGTRT taken."
+    },
+    {
+      "order": "21",
+      "name": "AGDOSTXT",
+      "label": "Dose Description",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Dosing amounts or a range of dosing information collected in text form. Units may be stored in AGDOSU. Examples: \"200-400\", \"15-20\"."
+    },
+    {
+      "order": "22",
+      "name": "AGDOSU",
+      "label": "Dose Units",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C71620",
+      "codelist_codes": [
+        "C71620"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C71620",
+      "description": "Units for AGDOSE and AGDOSTXT. Examples: \"ng\", \"mg\", \"mg/kg\"."
+    },
+    {
+      "order": "23",
+      "name": "AGDOSFRM",
+      "label": "Dose Form",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66726",
+      "codelist_codes": [
+        "C66726"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66726",
+      "description": "Dose form for AGTRT. Examples: \"TABLET\", \"AEROSOL\"."
+    },
+    {
+      "order": "24",
+      "name": "AGDOSFRQ",
+      "label": "Dosing Frequency per Interval",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C71113",
+      "codelist_codes": [
+        "C71113"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C71113",
+      "description": "Usually expressed as the number of repeated administrations of AGDOSE within a specific time period. Example: \"ONCE\"."
+    },
+    {
+      "order": "25",
+      "name": "AGROUTE",
+      "label": "Route of Administration",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66729",
+      "codelist_codes": [
+        "C66729"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66729",
+      "description": "Route of administration for AGTRT. Example: \"ORAL\"."
+    },
+    {
+      "order": "26",
+      "name": "VISITNUM",
+      "label": "Visit Number",
+      "type": "Num",
+      "length": null,
+      "core": "Exp",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "1. Clinical encounter number. \\n 2. Numeric version of VISIT, used for sorting."
+    },
+    {
+      "order": "27",
+      "name": "VISIT",
+      "label": "Visit Name",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "1. Protocol-defined description of clinical encounter. \\n 2. May be used in addition to VISITNUM and/or VISITDY."
+    },
+    {
+      "order": "28",
+      "name": "VISITDY",
+      "label": "Planned Study Day of Visit",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Planned study day of the visit based upon RFSTDTC in Demographics."
+    },
+    {
+      "order": "29",
+      "name": "TAETORD",
+      "label": "Planned Order of Element within Arm",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Number that gives the planned order of the element within the arm for the element in which the agent administration started."
+    },
+    {
+      "order": "30",
+      "name": "EPOCH",
+      "label": "Epoch",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C99079",
+      "codelist_codes": [
+        "C99079"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C99079",
+      "description": "Epoch associated with the start date/time of the agent administration started."
+    },
+    {
+      "order": "31",
+      "name": "AGSTDTC",
+      "label": "Start Date/Time of Agent",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "The date/time when administration of the treatment indicated by AGTRT and the dosing variables began."
+    },
+    {
+      "order": "32",
+      "name": "AGENDTC",
+      "label": "End Date/Time of Agent",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "The date/time when administration of the treatment indicated by AGTRT and the dosing variables ended."
+    },
+    {
+      "order": "33",
+      "name": "AGSTDY",
+      "label": "Study Day of Start of Agent",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Study day of start of agent relative to the sponsor-defined RFSTDTC."
+    },
+    {
+      "order": "34",
+      "name": "AGENDY",
+      "label": "Study Day of End of Agent",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Study day of end of agent relative to the sponsor-defined RFSTDTC."
+    },
+    {
+      "order": "35",
+      "name": "AGDUR",
+      "label": "Duration of Agent",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Collected duration for an agent episode. Used only if collected on the CRF and not derived from start and end date/times."
+    },
+    {
+      "order": "36",
+      "name": "AGSTRF",
+      "label": "Start Relative to Reference Period",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Describes the start of the agent relative to sponsor-defined reference period. The sponsor-defined reference period is a continuous period of time defined by a discrete starting point and a discrete ending point (represented by RFSTDTC and RFENDTC in Demographics). If information such as \"PRIOR\", \"ONGOING\", or \"CONTINUING\" was collected, this information may be translated into AGSTRF. \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7, Use of Relative Timing Variables."
+    },
+    {
+      "order": "37",
+      "name": "AGENRF",
+      "label": "End Relative to Reference Period",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Describes the end of the agent relative to the sponsor-defined reference period. The sponsor-defined reference period is a continuous period of time defined by a discrete starting point and a discrete ending point (represented by RFSTDTC and RFENDTC in Demographics). If information such as \"PRIOR\", \"ONGOING\", or \"CONTINUING\" was collected, this information may be translated into AGENRF. \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7, Use of Relative Timing Variables."
+    },
+    {
+      "order": "38",
+      "name": "AGSTRTPT",
+      "label": "Start Relative to Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Identifies the start of the agent as being before or after the sponsor-defined reference time point defined by variable AGSTTPT. \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7, Use of Relative Timing Variables."
+    },
+    {
+      "order": "39",
+      "name": "AGSTTPT",
+      "label": "Start Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Description or date/time in ISO 8601 character format of the reference point referred to by AGSTRTPT. Examples: \"2003-12-15\", \"VISIT 1\"."
+    },
+    {
+      "order": "40",
+      "name": "AGENRTPT",
+      "label": "End Relative to Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Identifies the end of the agent as being before or after the reference time point defined by variable AGENTPT. Identifies the end of the agent as being before or after the sponsor-defined reference time point defined by variable AGENTPT. \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7, Use of Relative Timing Variables."
+    },
+    {
+      "order": "41",
+      "name": "AGENTPT",
+      "label": "End Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Description or date/time in ISO 8601 character format of the reference point referred to by AGENRTPT. Examples: \"2003-12-25\", \"VISIT 2\"."
+    }
+  ],
+  "variable_summary": {
+    "required": 5,
+    "expected": 1,
+    "permissible": 35
+  },
+  "codelist_codes_used": [
+    "C66726",
+    "C66728",
+    "C66729",
+    "C66742",
+    "C66789",
+    "C71113",
+    "C71620",
+    "C99079"
+  ],
+  "fetched_at": "2025-12-26T21:55:20.985444"
+}

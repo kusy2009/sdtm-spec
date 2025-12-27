@@ -1,0 +1,531 @@
+{
+  "domain": "SU",
+  "label": "Substance Use",
+  "class": "Interventions",
+  "class_href": "/mdr/sdtmig/3-4/classes/Interventions",
+  "ig_version": "3-4",
+  "total_variables": 37,
+  "variables": [
+    {
+      "order": "1",
+      "name": "STUDYID",
+      "label": "Study Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Unique identifier for a study."
+    },
+    {
+      "order": "2",
+      "name": "DOMAIN",
+      "label": "Domain Abbreviation",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Two-character abbreviation for the domain."
+    },
+    {
+      "order": "3",
+      "name": "USUBJID",
+      "label": "Unique Subject Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Identifier used to uniquely identify a subject across all studies for all applications or submissions involving the product."
+    },
+    {
+      "order": "4",
+      "name": "SUSEQ",
+      "label": "Sequence Number",
+      "type": "Num",
+      "length": null,
+      "core": "Req",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Sequence number given to ensure uniqueness of subject records within a domain. May be any valid number."
+    },
+    {
+      "order": "5",
+      "name": "SUGRPID",
+      "label": "Group ID",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used to tie together a block of related records in a single domain for a subject."
+    },
+    {
+      "order": "6",
+      "name": "SUSPID",
+      "label": "Sponsor-Defined Identifier",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Identifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Sponsor-defined reference number. May be preprinted on the CRF as an explicit line identifier or defined in the sponsor's operational database. Example: Line number on a Tobacco & Alcohol Use CRF page."
+    },
+    {
+      "order": "7",
+      "name": "SUTRT",
+      "label": "Reported Name of Substance",
+      "type": "Char",
+      "length": null,
+      "core": "Req",
+      "role": "Topic",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Substance name. Examples: \"CIGARETTES\", \"COFFEE\"."
+    },
+    {
+      "order": "8",
+      "name": "SUMODIFY",
+      "label": "Modified Substance Name",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Synonym Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "If SUTRT is modified, then the modified text is placed here."
+    },
+    {
+      "order": "9",
+      "name": "SUDECOD",
+      "label": "Standardized Substance Name",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Synonym Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Standardized or dictionary-derived text description of SUTRT or SUMODIFY if the sponsor chooses to code the substance use. The sponsor is expected to provide the dictionary name and version used to map the terms utilizing the external codelist element in the Define-XML document."
+    },
+    {
+      "order": "10",
+      "name": "SUCAT",
+      "label": "Category for Substance Use",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Grouping Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Used to define a category of related records. Examples: \"TOBACCO\", \"ALCOHOL\", or \"CAFFEINE\"."
+    },
+    {
+      "order": "11",
+      "name": "SUSCAT",
+      "label": "Subcategory for Substance Use",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Grouping Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "A further categorization of substance use. Examples: \"CIGARS\", \"CIGARETTES\", \"BEER\", \"WINE\"."
+    },
+    {
+      "order": "12",
+      "name": "SUPRESP",
+      "label": "SU Pre-Specified",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "Used to indicate whether (\"Y\"/null) information about the use of a specific substance was solicited on the CRF."
+    },
+    {
+      "order": "13",
+      "name": "SUOCCUR",
+      "label": "SU Occurrence",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66742",
+      "codelist_codes": [
+        "C66742"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66742",
+      "description": "When the use of specific substances is solicited, SUOCCUR is used to indicate whether (\"Y\"/\"N\") a particular prespecified substance was used. Values are null for substances not specifically solicited."
+    },
+    {
+      "order": "14",
+      "name": "SUSTAT",
+      "label": "Completion Status",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66789",
+      "codelist_codes": [
+        "C66789"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66789",
+      "description": "When the use of prespecified substances is solicited, the completion status indicates that there was no response to the question about the prespecified substance. When there is no prespecified list on the CRF, then the completion status indicates that substance use was not assessed for the subject."
+    },
+    {
+      "order": "15",
+      "name": "SUREASND",
+      "label": "Reason Substance Use Not Collected",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Describes the reason substance use was not collected. Used in conjunction with SUSTAT when value of SUSTAT is \"NOT DONE\"."
+    },
+    {
+      "order": "16",
+      "name": "SUCLAS",
+      "label": "Substance Use Class",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Substance use class. May be obtained from coding. When coding to a single class, populate with class value. If using a dictionary and coding to multiple classes, then follow Section 4.2.8.3, Multiple Values for a Non-result Qualifier Variable, or omit SUCLAS."
+    },
+    {
+      "order": "17",
+      "name": "SUCLASCD",
+      "label": "Substance Use Class Code",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Code corresponding to SUCLAS. May be obtained from coding."
+    },
+    {
+      "order": "18",
+      "name": "SUDOSE",
+      "label": "Substance Use Consumption",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Amount of SUTRT consumed. Not populated if SUDOSTXT is populated."
+    },
+    {
+      "order": "19",
+      "name": "SUDOSTXT",
+      "label": "Substance Use Consumption Text",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Substance use consumption amounts or a range of consumption information collected in text form. Not populated if SUDOSE is populated."
+    },
+    {
+      "order": "20",
+      "name": "SUDOSU",
+      "label": "Consumption Units",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C71620",
+      "codelist_codes": [
+        "C71620"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C71620",
+      "description": "Units for SUDOSE, SUDOSTOT, or SUDOSTXT. Examples: \"oz\", \"CIGARETTE\", \"PACK\", \"g\"."
+    },
+    {
+      "order": "21",
+      "name": "SUDOSFRM",
+      "label": "Dose Form",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66726",
+      "codelist_codes": [
+        "C66726"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66726",
+      "description": "Dose form for SUTRT. Examples: \"INJECTABLE\", \"LIQUID\", \"POWDER\"."
+    },
+    {
+      "order": "22",
+      "name": "SUDOSFRQ",
+      "label": "Use Frequency Per Interval",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C71113",
+      "codelist_codes": [
+        "C71113"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C71113",
+      "description": "Usually expressed as the number of repeated administrations of SUDOSE within a specific time period. Example: \"Q24H\" (every day)."
+    },
+    {
+      "order": "23",
+      "name": "SUDOSTOT",
+      "label": "Total Daily Consumption",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Record Qualifier",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Total daily use of SUTRT using the units in SUDOSU. Used when dosing is collected as total daily dose. If a sponsor needs to aggregate the data over a period other than daily, then the aggregated total could be recorded in a supplemental qualifier variable."
+    },
+    {
+      "order": "24",
+      "name": "SUROUTE",
+      "label": "Route of Administration",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Variable Qualifier",
+      "codelist": "Version-agnostic anchor resource for codelist C66729",
+      "codelist_codes": [
+        "C66729"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66729",
+      "description": "Route of administration for SUTRT. Examples: \"ORAL\", \"INTRAVENOUS\"."
+    },
+    {
+      "order": "25",
+      "name": "TAETORD",
+      "label": "Planned Order of Element within Arm",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Number that gives the planned order of the element within the arm for the element in which the substance use started. Null for substances that started before study participation."
+    },
+    {
+      "order": "26",
+      "name": "EPOCH",
+      "label": "Epoch",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C99079",
+      "codelist_codes": [
+        "C99079"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C99079",
+      "description": "Epoch associated with the start date/time of the substance use. Null for substances that started before study participation."
+    },
+    {
+      "order": "27",
+      "name": "SUSTDTC",
+      "label": "Start Date/Time of Substance Use",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Start date/time of the substance use represented in ISO 8601 character format."
+    },
+    {
+      "order": "28",
+      "name": "SUENDTC",
+      "label": "End Date/Time of Substance Use",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "End date/time of the substance use represented in ISO 8601 character format."
+    },
+    {
+      "order": "29",
+      "name": "SUSTDY",
+      "label": "Study Day of Start of Substance Use",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Study day of start of substance use relative to the sponsor-defined RFSTDTC."
+    },
+    {
+      "order": "30",
+      "name": "SUENDY",
+      "label": "Study Day of End of Substance Use",
+      "type": "Num",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Study day of end of substance use relative to the sponsor-defined RFSTDTC."
+    },
+    {
+      "order": "31",
+      "name": "SUDUR",
+      "label": "Duration of Substance Use",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Collected duration of substance use in ISO 8601 format. Used only if collected on the CRF and not derived from start and end date/times."
+    },
+    {
+      "order": "32",
+      "name": "SUSTRF",
+      "label": "Start Relative to Reference Period",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Describes the start of the substance use relative to the sponsor-defined reference period. The sponsor-defined reference period is a continuous period of time defined by a discrete starting point and a discrete ending point (represented by RFSTDTC and RFENDTC in Demographics). If information such as \"PRIOR\" was collected, this information may be translated into SUSTRF. \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7, Use of Relative Timing Variables."
+    },
+    {
+      "order": "33",
+      "name": "SUENRF",
+      "label": "End Relative to Reference Period",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Describes the end of the substance use with relative to the sponsor-defined reference period. The sponsor-defined reference period is a continuous period of time defined by a discrete starting point and a discrete ending point (represented by RFSTDTC and RFENDTC in Demographics). If information such as \"PRIOR\", \"ONGOING\", or \"CONTINUING\" was collected, this information may be translated into SUENRF. \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7, Use of Relative Timing Variables."
+    },
+    {
+      "order": "34",
+      "name": "SUSTRTPT",
+      "label": "Start Relative to Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Identifies the start of the substance as being before or after the reference time point defined by variable SUSTTPT. \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7 , Use of Relative Timing Variables."
+    },
+    {
+      "order": "35",
+      "name": "SUSTTPT",
+      "label": "Start Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Description or date/time in ISO 8601 character format of the reference point referred to by SUSTRTPT. Examples: \"2003-12-15\", \"VISIT 1\"."
+    },
+    {
+      "order": "36",
+      "name": "SUENRTPT",
+      "label": "End Relative to Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": "Version-agnostic anchor resource for codelist C66728",
+      "codelist_codes": [
+        "C66728"
+      ],
+      "codelist_href": "/mdr/root/ct/sdtmct/codelists/C66728",
+      "description": "Identifies the end of the substance as being before or after the reference time point defined by variable SUENTPT. \\n Not all values of the codelist are allowable for this variable. See Section 4.4.7 , Use of Relative Timing Variables."
+    },
+    {
+      "order": "37",
+      "name": "SUENTPT",
+      "label": "End Reference Time Point",
+      "type": "Char",
+      "length": null,
+      "core": "Perm",
+      "role": "Timing",
+      "codelist": null,
+      "codelist_codes": [],
+      "codelist_href": null,
+      "description": "Description or date/time in ISO 8601 character format of the reference point referred to by SUENRTPT. Examples: \"2003-12-25\", \"VISIT 2\"."
+    }
+  ],
+  "variable_summary": {
+    "required": 5,
+    "expected": 0,
+    "permissible": 32
+  },
+  "codelist_codes_used": [
+    "C66726",
+    "C66728",
+    "C66729",
+    "C66742",
+    "C66789",
+    "C71113",
+    "C71620",
+    "C99079"
+  ],
+  "fetched_at": "2025-12-27T00:54:32.655417"
+}
