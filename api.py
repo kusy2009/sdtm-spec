@@ -26,7 +26,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from sdtm_spec_v2 import SDTMSpecServiceV2
 
 # Initialize Flask app with static folder for React build
-app = Flask(__name__, static_folder='frontend/build', static_url_path='')
+app = Flask(__name__, static_folder='frontend/build/static', static_url_path='/static')
 CORS(app)  # Enable CORS for React frontend
 
 # Initialize service
@@ -213,13 +213,13 @@ def get_all_codelists():
 @app.errorhandler(404)
 def not_found(e):
     # Serve React app for any non-API routes
-    return send_from_directory(app.static_folder, 'index.html')
+    return send_from_directory('frontend/build', 'index.html')
 
 
 @app.route('/')
 def serve_react():
     """Serve React frontend."""
-    return send_from_directory(app.static_folder, 'index.html')
+    return send_from_directory('frontend/build', 'index.html')
 
 
 @app.errorhandler(500)
